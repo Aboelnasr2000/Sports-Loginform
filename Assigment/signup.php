@@ -33,6 +33,21 @@ function validateform() {
 </script>
 
 <body>
+<nav class=" navbar-expand-xl navbar-light bg-white shadow-sm">
+        <div class="" style="background-color:var(--blue); font-size:1.2rem;">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+                    <a class="" href=" url('home.php') ">
+                        <div class="heading" style="background-color:var(--blue); font-size:2rem;">SportsHUB
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">

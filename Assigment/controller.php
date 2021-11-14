@@ -26,6 +26,9 @@ if (isset($_POST['register'])) {
     $password = $_POST["password"];
     $confirmpassword = $_POST['confirmpassword'];
 
+
+
+
     if (empty($_POST['username'])) {
         $errors['username'] = 'Username is required.';
     }
@@ -40,7 +43,7 @@ if (isset($_POST['register'])) {
 
         if ($row) {
             session_start();
-            $_SESSION ['email'] ="Email Already Registered";
+            $_SESSION['email'] = "Email Already Registered";
             $errors['email'] = 'Email already taken.';
         }
     }
@@ -56,7 +59,8 @@ if (isset($_POST['register'])) {
         header("location:signup.php");
         echo json_encode($data);
     } else {
-        $enrypted = md5($password);
+
+        $encrypted = md5($password);
         $sql = "INSERT INTO users ( UserName , email , password ) VALUES ('$username', '$email' , '$encrypted' )";
 
         if ($con->query($sql) === TRUE) {
